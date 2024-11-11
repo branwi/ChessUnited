@@ -1,0 +1,75 @@
+/* Common nav styles */
+.navigation-wrapper {
+    height: 450px;
+    background-color: #ffffff;
+    color: #cbcbcb;
+    /* Flexbox container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Left column styles */
+
+.links-wrapper > .nav-link a {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    color: white;
+}
+
+/* Center column styles */
+.navigation-wrapper > .center-column {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1px;
+    width: 700px;
+}
+
+
+
+.navigation-wrapper > .center-column > .banner-image {
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-wrapper > .center-column > .banner-image img {
+    width: 350px;
+    height: 100%;
+}
+
+.links-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.links-wrapper > .nav-link {
+    width: 175px;
+    text-align: center;
+}
+
+
+.links-wrapper > .nav-link a {
+    font-family: "Ubuntu Condensed", sans-serif;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 2em;
+    transition: 0.5s;
+}
+
+.links-wrapper > .nav-link a:hover {
+    letter-spacing: 1.5px;
+}
+
+.navigation-wrapper > .center-column > .links-wrapper > .nav-link {
+    width: 190px;
+    text-align: center;
+}
+
+.navigation-wrapper > .center-column > .links-wrapper > .nav-link a {
+    font-family: "Ubuntu Condensed", sans-serif;
+    color: #000000;
+    text-decoration: none;
+    font-size: 2em;
+    transition: 0.5s;
+}
+/* Right column styles */

@@ -1,0 +1,28 @@
+/* Common styles */
+body {
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Slab', serif;
+}
+
+h0 {
+    font-size: 3.5em;
+    font-family: 'Roboto Slab', serif;
+}
+
+h7{
+    font-size: 1.1em;
+}
+subT {
+    font-size: 2.3em;
+    font-family: 'Tahoma', monospace;
+    color: #0c2e9c;
+}
+
+hr{
+    background-color: black;
+    height: 5px;
+}
