@@ -1,7 +1,7 @@
 /* Common nav styles */
 .navigation-wrapper {
-    height: 450px;
-    background-color: #ffffff;
+    height: 400px;
+    background-color: #b5f0ff;
     color: #cbcbcb;
     /* Flexbox container */
     display: flex;
