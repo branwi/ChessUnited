@@ -1,10 +1,10 @@
 /* Hero section styles */
 .hero-section {
-    background-image: url(../images/backgrounds/fries-hero-bg.jpg);
-    padding: 150px;
-    height: 350px;
+    background-image: url(../images/backgrounds/chessMain.jpg);
+    padding: 150px 150px 0 150px; /* Removed bottom padding */
+    height: 450px;
     background-attachment: fixed;
-    background-position: center;
+    background-position: center calc(100% - 350px);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -32,64 +32,88 @@
     justify-content: center;
 }
 
-/* Features section styles */
-
+/* Updated .features-section */
 .features-section {
-    height: 500px;
-    background-image: url(../images/backgrounds/chesspawn.png);
-    background-color: #bab9c2;
-    border-top: 10px solid white;
-    color: #0c2e9c;
+    background-color: #b5f0ff;
+    border-top: 10px solid #fff;
+    color: #333;
     font-family: "Ubuntu Condensed", sans-serif;
-    box-shadow: inset 0px -26px 79px -8px rgba(187, 186, 186, 0.58);
+    padding: 80px 0; /* Adjusted padding for more vertical space */
 }
 
-.features-section > .test{
+/* Center and contain the columns */
+.features-section .columns-wrapper {
+    max-width: 1600px;
+    margin: 0 auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /* Evenly distribute columns */
     align-items: center;
+    flex-wrap: nowrap; /* Prevent columns from wrapping to the next line */
 }
 
-.features-section > .test > .columns-wrapper {
-    width: 2000px;
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-}
-
-.features-section > .test > .columns-wrapper > .column {
-    background-color: #ccf0ee;
-    padding: 50px;
-    margin: 30px;
+/* Style the individual columns */
+.features-section .column {
+    background-color: #fff;
+    padding: 50px; /* Increased padding for larger content area */
+    margin: 0 15px; /* Adjusted margins to fit columns on one line */
     text-align: center;
     border-bottom: 5px solid transparent;
     border-radius: 10px;
-    transition: 1s;
-    align-items: center;
-    justify-content: center;
+    transition: border-bottom 0.3s;
+    flex: 0 1 30%; /* Fixed width to ensure columns stay on the same line */
+    max-width: 30%; /* Ensure columns fit within the container */
+    box-sizing: border-box;
 }
 
-.features-section > .test > .columns-wrapper > .column:hover {
-    border-bottom: 5px solid #ffffff;
+/* Hover effect for columns */
+.features-section .column:hover {
+    border-bottom: 5px solid #3498db;
 }
 
-.features-section > .test > .columns-wrapper > .column :nth-child(1) {
-    font-size: 5em;
+/* Style the icons */
+.features-section .column i {
+    font-size: 8em; /* Large icons for emphasis */
+    color: #3498db;
+    margin-bottom: 30px;
 }
 
-.features-section > .test > .columns-wrapper > .column :nth-child(2) {
-    font-size: 5em;
-    font-weight: 900;
-    height: 50px;
-    transition: 1s;
+/* Style the text */
+.features-section .column p {
+    font-size: 3em; /* Emphasized text */
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+    line-height: 1.2;
 }
 
-.features-section > .test > .columns-wrapper > .column :nth-child(2):hover {
-    letter-spacing: 1px;
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .features-section .columns-wrapper {
+        flex-wrap: wrap; /* Allow columns to wrap on smaller screens */
+        justify-content: center;
+    }
+
+    .features-section .column {
+        flex: 0 1 45%; /* Adjust width for smaller screens */
+        max-width: 45%;
+        margin: 15px;
+    }
 }
 
-.features-section > .test > .columns-wrapper > .column :nth-child(3) {
-    letter-spacing: 2px;
+@media (max-width: 768px) {
+    .features-section .column {
+        flex: 0 1 100%; /* Columns occupy full width on mobile */
+        max-width: 100%;
+        margin: 10px 0;
+    }
+
+    .features-section .column i {
+        font-size: 6em; /* Adjust icon size for mobile */
+    }
+
+    .features-section .column p {
+        font-size: 2.5em; /* Adjust text size for mobile */
+    }
 }
 
 .library {

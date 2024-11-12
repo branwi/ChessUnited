@@ -37,6 +37,16 @@
     justify-content: center;
 }
 
+.title-comp {
+    color: #0c2e9c;
+    padding: 10px;
+    font-size: 2em;
+    text-align: center;
+    text-decoration: underline;
+    display: flex;
+    justify-content: center;
+}
+
 .mini {
     padding: 10px;
     font-size: 2em;
