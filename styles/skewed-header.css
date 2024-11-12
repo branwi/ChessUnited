@@ -1,6 +1,6 @@
 .skewed-header, .skewed-header-comp {
     position: relative;
-    height: 450px;
+    height: 275px;
     overflow: hidden;
 }
 
@@ -15,7 +15,7 @@
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
-    transform: skewY(-6deg);
+    transform: skewY(-5deg);
     transform-origin: top left;
     filter: brightness(50%);
 }
