@@ -64,3 +64,35 @@
     background-color: #fff;
     color: #0c2e9c;
 }
+@media (max-width: 768px) {
+    .skewed-header {
+        height: 300px; /* Reduce header height for smaller screens */
+    }
+
+    .skewed-header > .header-bg {
+        transform: skewY(-4deg); /* Slightly reduce skew for better appearance */
+    }
+
+    .skewed-header-wrapper {
+        margin-top: 50px; /* Decrease top margin */
+        padding: 0 10px; /* Add horizontal padding if needed */
+    }
+
+    .skewed-header h1 {
+        font-size: 32px; /* Decrease font size */
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+
+    .links-wrapper {
+        flex-direction: column; /* Stack links vertically */
+        gap: 15px; /* Reduce gap between links */
+        align-items: center; /* Center the links */
+    }
+
+    .nav-link a {
+        font-size: 18px; /* Slightly smaller text */
+        padding: 8px 16px; /* Reduce padding */
+        border-radius: 20px; /* Slightly smaller border radius */
+    }
+}
