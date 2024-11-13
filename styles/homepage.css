@@ -1,91 +1,220 @@
-/* Hero section styles */
-.hero-section {
-    background-image: url(../images/backgrounds/chessMain.jpg);
-    padding: 150px 150px 0 150px; /* Removed bottom padding */
-    height: 450px;
-    background-attachment: fixed;
-    background-position: center calc(100% - 350px);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap');
 
-.hero-section > .top-heading {
-    padding: 1px 20px;
-    background-color: #2d3bb6;
-    color: #cbcbcb;
-    width: 1000px;
-    font-size:1.5em;
-    align-items:center;
-    text-align: center;
-    justify-content: center;
-}
-
-.hero-section > .bottom-heading {
-    background-color: #cea135;
-    color: #ffffff;
-    padding: 1px 20px;
-    margin-top: 15px;
-    font-size: 1.25em;
-    width: 600px;
-    border-radius: 2px;
-    text-align: center;
-    justify-content: center;
-}
-
-/* Updated .features-section */
-.features-section {
-    background-color: #b5f0ff;
-    border-top: 10px solid #fff;
-    color: #333;
-    font-family: "Ubuntu Condensed", sans-serif;
-    padding: 80px 0; /* Adjusted padding for more vertical space */
-}
-
-/* Center and contain the columns */
-.features-section .columns-wrapper {
-    max-width: 1600px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between; /* Evenly distribute columns */
-    align-items: center;
-    flex-wrap: nowrap; /* Prevent columns from wrapping to the next line */
-}
-
-/* Style the individual columns */
-.features-section .column {
-    background-color: #fff;
-    padding: 50px; /* Increased padding for larger content area */
-    margin: 0 15px; /* Adjusted margins to fit columns on one line */
-    text-align: center;
-    border-bottom: 5px solid transparent;
-    border-radius: 10px;
-    transition: border-bottom 0.3s;
-    flex: 0 1 30%; /* Fixed width to ensure columns stay on the same line */
-    max-width: 30%; /* Ensure columns fit within the container */
-    box-sizing: border-box;
-}
-
-/* Hover effect for columns */
-.features-section .column:hover {
-    border-bottom: 5px solid #3498db;
-}
-
-/* Style the icons */
-.features-section .column i {
-    font-size: 8em; /* Large icons for emphasis */
-    color: #3498db;
-    margin-bottom: 30px;
-}
-
-/* Style the text */
-.features-section .column p {
-    font-size: 3em; /* Emphasized text */
-    font-weight: bold;
-    color: #333;
+body {
+    font-family: 'Open Sans', sans-serif;
     margin: 0;
-    line-height: 1.2;
+    padding: 0;
+    background-color: #fff;
 }
 
+.white-text {
+    color: white;
+}
+
+/* Hero Section */
+.hero-section {
+    background-image: url('../images/backgrounds/chessMain.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.hero-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1; /* Overlay is behind the content */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; /* Content is above the overlay */
+    text-align: center;
+    color: #fff;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 4em;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-content h3 {
+    font-size: 1.8em;
+    font-weight: 300;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Features Section */
+.features-section {
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #2d3bb6 0%, #4f5bd5 100%);
+    color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.features-section::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    right: -50px;
+    bottom: -50px;
+    background: url('../images/backgrounds/impact.jpg') center/cover no-repeat;
+    opacity: 0.15;
+    z-index: -1;
+}
+
+.features-section .title h1 {
+    font-size: 2em;
+    margin-bottom: 60px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeInDown 1s ease-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.columns-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.column {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 60px 30px;
+    flex: 1 1 250px;
+    max-width: 300px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.column::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 80%;
+    height: 100%;
+    background: radial-gradient(circle at top, rgba(255, 255, 255, 0.2), transparent);
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.column:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+.column i {
+    font-size: 4em;
+    color: #ffd700;
+    margin-bottom: 30px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-20px); }
+    60% { transform: translateY(-10px); }
+}
+
+.column p {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.column p span {
+    display: block;
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-top: 10px;
+    color: #fff;
+}
+
+.column:hover p span {
+    color: #ffd700;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .hero-content h1 {
+        font-size: 3em;
+    }
+    .hero-content h3 {
+        font-size: 1.5em;
+    }
+    .features-section .title h1 {
+        font-size: 2.5em;
+    }
+    .column {
+        padding: 50px 20px;
+    }
+    .column i {
+        font-size: 3.5em;
+    }
+    .column p {
+        font-size: 1.3em;
+    }
+    .column p span {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 768px) {
+    .columns-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    .column {
+        max-width: 100%;
+        width: 100%;
+    }
+}
 /* Responsive adjustments */
 @media (max-width: 1200px) {
     .features-section .columns-wrapper {
@@ -97,22 +226,6 @@
         flex: 0 1 45%; /* Adjust width for smaller screens */
         max-width: 45%;
         margin: 15px;
-    }
-}
-
-@media (max-width: 768px) {
-    .features-section .column {
-        flex: 0 1 100%; /* Columns occupy full width on mobile */
-        max-width: 100%;
-        margin: 10px 0;
-    }
-
-    .features-section .column i {
-        font-size: 6em; /* Adjust icon size for mobile */
-    }
-
-    .features-section .column p {
-        font-size: 2.5em; /* Adjust text size for mobile */
     }
 }
 
