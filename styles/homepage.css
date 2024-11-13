@@ -11,7 +11,6 @@ body {
     color: white;
 }
 
-/* Hero Section */
 .hero-section {
     background-image: url('../images/backgrounds/chessMain.jpg');
     background-size: cover;
@@ -33,12 +32,12 @@ body {
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.6);
-    z-index: 1; /* Overlay is behind the content */
+    z-index: 1;
 }
 
 .hero-content {
     position: relative;
-    z-index: 2; /* Content is above the overlay */
+    z-index: 2; 
     text-align: center;
     color: #fff;
     max-width: 800px;
@@ -71,7 +70,6 @@ body {
     }
 }
 
-/* Features Section */
 .features-section {
     padding: 100px 20px;
     background: linear-gradient(135deg, #2d3bb6 0%, #4f5bd5 100%);
@@ -180,7 +178,6 @@ body {
     color: #ffd700;
 }
 
-/* Responsive Design */
 @media (max-width: 992px) {
     .hero-content h1 {
         font-size: 3em;
@@ -215,15 +212,15 @@ body {
         width: 100%;
     }
 }
-/* Responsive adjustments */
+
 @media (max-width: 1200px) {
     .features-section .columns-wrapper {
-        flex-wrap: wrap; /* Allow columns to wrap on smaller screens */
+        flex-wrap: wrap;
         justify-content: center;
     }
 
     .features-section .column {
-        flex: 0 1 45%; /* Adjust width for smaller screens */
+        flex: 0 1 45%;
         max-width: 45%;
         margin: 15px;
     }

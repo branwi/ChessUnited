@@ -32,7 +32,7 @@ h2 {
     width: 100%;
     max-width: 1200px;
 }
-/* Container Styles */
+
 .squares-wrapper {
     display: flex;
     justify-content: center;
@@ -83,7 +83,6 @@ h2 {
     transform: scale(1.05);
 }
 
-/* Responsive Adjustments */
 @media (max-width: 768px) {
     h1 {
         font-size: 32px;

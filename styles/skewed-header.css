@@ -16,7 +16,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    transform: skewY(-6deg);
+    transform: skewY(-4deg);
     transform-origin: top left;
     filter: brightness(50%);
 }
@@ -29,7 +29,7 @@
     margin-top: 100px;
     justify-content: top;
     align-items: center;
-    z-index: 1; /* Positions content above the overlay */
+    z-index: 1;
 }
 
 .skewed-header-content {
@@ -66,33 +66,33 @@
 }
 @media (max-width: 768px) {
     .skewed-header {
-        height: 300px; /* Reduce header height for smaller screens */
+        height: 300px; 
     }
 
     .skewed-header > .header-bg {
-        transform: skewY(-4deg); /* Slightly reduce skew for better appearance */
+        transform: skewY(-3deg); 
     }
 
     .skewed-header-wrapper {
-        margin-top: 50px; /* Decrease top margin */
-        padding: 0 10px; /* Add horizontal padding if needed */
+        margin-top: 50px;
+        padding: 0 10px; 
     }
 
     .skewed-header h1 {
-        font-size: 32px; /* Decrease font size */
+        font-size: 32px;
         margin-top: 20px;
         margin-bottom: 15px;
     }
 
     .links-wrapper {
-        flex-direction: column; /* Stack links vertically */
-        gap: 15px; /* Reduce gap between links */
-        align-items: center; /* Center the links */
+        flex-direction: column;
+        gap: 15px;
+        align-items: center; 
     }
 
     .nav-link a {
-        font-size: 18px; /* Slightly smaller text */
-        padding: 8px 16px; /* Reduce padding */
-        border-radius: 20px; /* Slightly smaller border radius */
+        font-size: 18px;
+        padding: 8px 16px;
+        border-radius: 20px;
     }
 }
