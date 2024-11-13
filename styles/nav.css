@@ -1,26 +1,20 @@
-/* Common nav styles */
 .navigation-wrapper {
-    /* Removed fixed height and added padding */
     padding: 40px 0;
-    /* Changed background color to a gradient */
     background: linear-gradient(135deg, #b5f0ff 0%, #ffffff 100%);
     color: #cbcbcb;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* Added subtle shadow for depth */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin: 0 auto;
 }
 
-/* Left column styles */
 .links-wrapper > .nav-link a {
     font-family: 'Ubuntu Condensed', sans-serif;
     color: white;
 }
 
-/* Center column styles */
 .navigation-wrapper > .center-column {
     display: grid;
     grid-template-columns: 1fr;
@@ -30,13 +24,11 @@
 .navigation-wrapper > .center-column > .banner-image {
     display: flex;
     justify-content: center;
-    /* Added margin-bottom to create spacing */
     margin-bottom: 30px;
 }
 
 .navigation-wrapper > .center-column > .banner-image img {
     width: 350px;
-    /* Changed height to auto for proper scaling */
     height: auto;
 }
 
@@ -63,16 +55,22 @@
     letter-spacing: 1.5px;
 }
 
+.links-wrapper > .nav-link a:hover {
+    background-color: #fff;
+    color: #0c2e9c;
+}
+
 .navigation-wrapper > .center-column > .links-wrapper > .nav-link {
     width: 190px;
     text-align: center;
 }
 
 .navigation-wrapper > .center-column > .links-wrapper > .nav-link a {
+    border: 2px solid #000000;
+    border-radius: 25px;
     font-family: "Ubuntu Condensed", sans-serif;
     color: #000000;
     text-decoration: none;
     font-size: 2em;
     transition: 0.5s;
 }
-/* Right column styles */
