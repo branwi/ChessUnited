@@ -24,12 +24,20 @@
 .navigation-wrapper > .center-column > .banner-image {
     display: flex;
     justify-content: center;
-    margin-bottom: 30px;
 }
 
 .navigation-wrapper > .center-column > .banner-image img {
     width: 350px;
     height: auto;
+    margin-bottom: 15px;
+}
+
+.navigation-wrapper > .center-column > .logo-title {
+    font-size: 2.25em;
+    display: flex;
+    justify-content: center;
+    color:black;
+    margin-bottom: 30px;
 }
 
 .links-wrapper {
@@ -73,4 +81,7 @@
     text-decoration: none;
     font-size: 2em;
     transition: 0.5s;
+}
+.logo-title h2 {
+    margin: 0;
 }
