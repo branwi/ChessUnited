@@ -24,8 +24,8 @@
 }
 
 .footer > .social-media-icons-wrapper {
-    margin-top: 20px;
-    margin-bottom: 40px;
+    margin-top: 5px;
+    margin-bottom: 20px;
     width: 300px;
     display: flex;
     justify-content: space-around;
@@ -51,4 +51,10 @@
     color: #cbcbcb;
     margin: 0px;
     margin-top: 30px;
+}
+.footer-title h3 {
+    font-size: 1.25em;
+    font-family: 'Roboto Slab', serif;
+    color: #cbcbcb;
+    margin-top: 5px;
 }
